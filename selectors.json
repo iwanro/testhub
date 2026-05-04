@@ -1,0 +1,29 @@
+{
+  "version": "1.1",
+  "last_updated": "2026-05-04",
+  "description": "Comprehensive selector database for WhatsApp Web CRM. Uses data-testid for maximum stability.",
+  "selectors": {
+    "appRoot": "#app",
+    "mainContainer": "#main",
+    "sidePanel": "#side",
+    "chatList": "[data-testid='chat-list']",
+    "chatRow": "[data-testid='list-item']",
+    "chatRowName": "[data-testid='cell-frame-title']",
+    "chatRowSubtitle": "[data-testid='last-msg-status']",
+    "chatRowAvatar": "[data-testid='avatar-container']",
+    "activeChatHeader": "[data-testid='conversation-header']",
+    "activeContactName": "[data-testid='conversation-info-header'] [title]",
+    "activeContactStatus": "[data-testid='conversation-info-header'] .selectable-text",
+    "activeContactAvatar": "[data-testid='conversation-header'] [data-testid='avatar-container']",
+    "searchBar": "[data-testid='chat-list-search']",
+    "messageList": "[data-testid='conversation-panel-messages']",
+    "inputBar": "[data-testid='footer']",
+    "chatInfoDrawer": "[data-testid='contact-info-drawer']",
+    "chatInfoPhone": "[data-testid='contact-info-drawer'] .selectable-text.copyable-text"
+  },
+  "extraction_rules": {
+    "id_from_url": "regex:([0-9]{10,15})",
+    "id_from_title": "attr:title",
+    "phone_from_drawer": "text_content"
+  }
+}
